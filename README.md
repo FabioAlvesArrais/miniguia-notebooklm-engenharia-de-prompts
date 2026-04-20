@@ -1,4 +1,8 @@
 # 📘 Miniguia NotebookLM: Engenharia de Prompts Aplicada a Dados
+## 📸 Exemplos no NotebookLM
+
+### Upload das fontes
+![Upload](assets/prints/NotebookLM.PNG)
 
 ## 🧠 Contexto
 
