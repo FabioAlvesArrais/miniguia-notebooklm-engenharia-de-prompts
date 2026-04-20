@@ -1,8 +1,4 @@
 # 📘 Miniguia NotebookLM: Engenharia de Prompts Aplicada a Dados
-## 📸 Exemplos no NotebookLM
-
-### Upload das fontes
-![Upload](assets/prints/NotebookLM.PNG)
 
 ## 🧠 Contexto
 
@@ -208,6 +204,13 @@ Ela permite transformar modelos de IA em ferramentas práticas para:
 * análise de dados
 * automação de tarefas
 * geração de insights
+
+## 📸 Exemplos no NotebookLM
+
+### Upload das fontes
+![Upload](assets/prints/NotebookLM.PNG)
+![Upload](assets/prints/NotebookLM_pronpt.PNG)
+![Upload](assets/prints/NotebookLM_pronpt_mapa_mental.PNG)
 
 ---
 
