@@ -147,6 +147,58 @@ Ela combina:
 
 ---
 
+## 📊 Caso Prático: Engenharia de Prompts em BI
+
+### 🎯 Objetivo
+Identificar os 5 produtos mais vendidos no último mês com base no volume total de vendas.
+
+---
+
+### 🧠 Prompt utilizado
+```
+Atue como um analista de dados.
+Gere uma query SQL para identificar os 5 produtos mais vendidos no último mês, considerando volume total de vendas.
+```
+
+---
+
+### 💻 Query gerada (SQL)
+
+```sql
+SELECT 
+    p.ProductName,
+    SUM(od.Quantity) AS TotalVolume
+FROM Products p
+JOIN OrderDetails od ON p.ProductID = od.ProductID
+JOIN Orders o ON od.OrderID = o.OrderID
+WHERE o.OrderDate >= DATE_SUB(CURRENT_DATE(), INTERVAL 1 MONTH)
+GROUP BY p.ProductName
+ORDER BY TotalVolume DESC
+LIMIT 5;
+```
+
+---
+
+### 📈 Explicação
+- A query realiza JOIN entre produtos, pedidos e detalhes de pedidos 
+- Utiliza SUM(Quantity) para calcular o volume total vendido 
+- Filtra os dados para o último mês 
+- Ordena os resultados e retorna o Top 5 
+
+--- 
+
+### 💡 Insight
+A utilização de prompts estruturados permite transformar linguagem natural em consultas SQL complexas, reduzindo o tempo de análise e aumentando a produtividade no contexto de BI. 
+
+--- 
+
+### ⚠️ Considerações 
+- Validar integridade dos dados (valores nulos ou inconsistentes) 
+- Garantir indexação em OrderDate para performance 
+- Ajustar granularidade caso existam múltiplos pedidos por produto
+
+---
+
 ## 📘 Glossário
 
 **LLM (Large Language Model):** modelo treinado em grandes volumes de texto
